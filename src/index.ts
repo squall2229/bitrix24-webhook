@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/webhook', (req: Request, res: Response) => {
+app.post('/webhook', (req: Request, res: Response) => {
   console.log(req.body);
   res.send('Success!');
 });
